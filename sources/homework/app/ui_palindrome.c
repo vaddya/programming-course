@@ -1,4 +1,4 @@
-#include "main.h"
+#include "ui.h"
 #include "palindrome.h"
 #include "ui_palindrome.h"
 

@@ -1,4 +1,4 @@
-#include "main.h"
+#include "ui.h"
 #include "time.h"
 #include "ui_time.h"
 

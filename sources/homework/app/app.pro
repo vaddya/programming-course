@@ -8,7 +8,8 @@ SOURCES += main.c \
     ui_circle_game.c \
     ui_inch_to_cm.c \
     ui_palindrome.c \
-    ui_time.c
+    ui_time.c \
+    cli.c
 
 
 win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../library/release/ -llibrary
@@ -29,4 +30,5 @@ HEADERS += \
     ui_palindrome.h \
     ui_inch_to_cm.h \
     ui_circle_game.h \
-    main.h
+    cli.h \
+    ui.h

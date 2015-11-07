@@ -1,4 +1,4 @@
-#include "main.h"
+#include "ui.h"
 #include "circle_game.h"
 #include "ui_circle_game.h"
 

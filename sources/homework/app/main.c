@@ -20,28 +20,21 @@
  * человека.
  */
 
-#include "main.h"
+#include "ui.h"
+#include "cli.h"
 
 int main(int argc, char* argv[])
 {
-    if (argc > 1)
+    if (argc > 2)
     {
         if (strcmp(argv[1], "--interactive") == 0 || strcmp(argv[1], "--menu") == 0 || strcmp(argv[1], "-m") == 0)
             main_menu();
         if (strcmp(argv[1], "--help") == 0 || strcmp(argv[1], "-h") == 0)
             help();
-        if (strcmp(argv[1], "--inch_to_cm") == 0 || strcmp(argv[1], "-i") == 0)
-        {
-            if (argc > 2)
-            {
-                Meters meter;
-                int inches = atoi(argv[2]);
-                calculating_inch_to_cm(inches, &meter);
-                show_inch_to_cm(inches, meter);
-            }
-            else
-            puts("Type --help (-h) for usage.");
-        }
+
+        cli_inch_to_cm(argc, argv);
+
+
         if (strcmp(argv[1], "--time") == 0 || strcmp(argv[1], "-t") == 0)
         {
             if (argc > 7)
@@ -70,6 +63,7 @@ int main(int argc, char* argv[])
             else
             puts("Type --help (-h) for usage.");
         }
+
         if (strcmp(argv[1], "--circle_game") == 0 || strcmp(argv[1], "-c") == 0)
         {
             if (argc > 3)
@@ -80,6 +74,7 @@ int main(int argc, char* argv[])
             else
             puts("Type --help (-h) for usage.");
         }
+
     }
     else
         puts("Type --help (-h) for usage.");
