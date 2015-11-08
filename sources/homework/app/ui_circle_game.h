@@ -9,5 +9,7 @@ void input_file_circle_game();
 void show_circle_game(int);
 void help_circle_game();
 
+int __fpurge(FILE *stream);
+
 #endif // UI_CIRCLE_GAME
 

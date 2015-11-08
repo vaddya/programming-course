@@ -12,6 +12,5 @@
 
 void main_menu();
 void help();
-int __fpurge(FILE *stream);
 
 #endif // MAIN

@@ -43,11 +43,12 @@ void input_inch_to_cm()
     scanf("%d", &inches);
     calculating_inch_to_cm(inches, &meter);
     show_inch_to_cm(inches, meter);
+    printf("\n");
 }
 
 void show_inch_to_cm(int inches, Meters meter)
 {
-    printf("%d inches = %d m %d cm %.1f mm\n\n", inches, meter.m, meter.cm, meter.mm);
+    printf("%d inches = %d m %d cm %.1f mm\n", inches, meter.m, meter.cm, meter.mm);
 }
 
 void help_inch_to_cm()

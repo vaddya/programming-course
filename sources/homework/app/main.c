@@ -8,10 +8,10 @@
  * Определить, за какое время он одолел первую половину пути?
  */
 
- /* #2: PALINDROM
-  * Проверить, является ли заданное число палиндромом (симметричным, первая цифра равна
-  * последней и так далее). Примеры: 1357531 > да; 208082 > нет.
-  */
+/* #2: PALINDROM
+ * Проверить, является ли заданное число палиндромом (симметричным, первая цифра равна
+ * последней и так далее). Примеры: 1357531 > да; 208082 > нет.
+ */
 
 /* #3: CIRCLE GAME
  * По кругу располагаются n человек. Ведущий считает по кругу, начиная с первого, и
@@ -25,55 +25,25 @@
 
 int main(int argc, char* argv[])
 {
-    if (argc > 2)
+    if (argc > 1)
     {
-        if (strcmp(argv[1], "--interactive") == 0 || strcmp(argv[1], "--menu") == 0 || strcmp(argv[1], "-m") == 0)
+        int is_used = 0;
+        if (attempt_parameter("--interactive", "-m", argv[1], 1, argc))
+        {
             main_menu();
-        if (strcmp(argv[1], "--help") == 0 || strcmp(argv[1], "-h") == 0)
+            is_used++;
+        }
+        if (attempt_parameter("--help", "-h", argv[1], 1, argc))
+        {
             help();
-
-        cli_inch_to_cm(argc, argv);
-
-
-        if (strcmp(argv[1], "--time") == 0 || strcmp(argv[1], "-t") == 0)
-        {
-            if (argc > 7)
-            {
-                double velocity[NUMBER_OF_PIECES];
-                double time[NUMBER_OF_PIECES];
-                int i;
-                for(i = 0; i < 3; i++)
-                {
-                    time[i] = atoi(argv[2+2*i]); // 2, 4, 6 args
-                    velocity[i] = atoi(argv[3+2*i]); // 3, 5, 7 args
-                }
-                double total_time = calculating_time(velocity, time);
-                show_time(total_time);
-            }
-            else
-            puts("Type --help (-h) for usage.");
+            is_used++;
         }
-        if (strcmp(argv[1], "--palindrome") == 0 || strcmp(argv[1], "-p") == 0)
-        {
-            if (argc > 2)
-            {
-                int is_palian = is_palindrome(argv[2]);
-                show_palindrome(argv[2], is_palian);
-            }
-            else
-            puts("Type --help (-h) for usage.");
-        }
-
-        if (strcmp(argv[1], "--circle_game") == 0 || strcmp(argv[1], "-c") == 0)
-        {
-            if (argc > 3)
-            {
-                int winner = determine_the_winner(atoi(argv[2]), atoi(argv[3]));
-                show_circle_game(winner);
-            }
-            else
-            puts("Type --help (-h) for usage.");
-        }
+        if (cli_inch_to_cm(argc, argv)) is_used++;
+        if (cli_time(argc, argv)) is_used++;
+        if (cli_palindrome(argc, argv)) is_used++;
+        if (cli_circle_game(argc, argv)) is_used++;
+        if (!is_used)
+            printf("Unknown subcommand '%s'! Type --help (-h) for usage.\n", argv[1]);
 
     }
     else
