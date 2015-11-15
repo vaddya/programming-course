@@ -14,13 +14,15 @@ SOURCES += \
     circle_game.c \
     inch_to_cm.c \
     palindrome.c \
-    time.c
+    time.c \
+    phrases.c
 
 HEADERS += \
     circle_game.h \
     palindrome.h \
     time.h \
-    inch_to_cm.h
+    inch_to_cm.h \
+    phrases.h
 unix {
     target.path = /usr/lib
     INSTALLS += target

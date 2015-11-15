@@ -60,32 +60,36 @@ void input_file_circle_game()
         strcpy(i_filename, "input");
     FILE * read;
 
-    if ((read = fopen(i_filename, "r"))==NULL)
+    if ((read = fopen(i_filename, "r")) == NULL)
     {
         puts("Error! Cannot open input file. Input interrupted.\n");
         menu_circle_game();
     }
+    else
+    {
+        fscanf(read, "%d %d", &n, &m);
+        fclose(read);
 
-    fscanf(read, "%d %d", &n, &m);
-    fclose(read);
+        printf("Write the output file (0 for \"output\"): ");
+        char o_filename[20];
+        scanf("%s", o_filename);
+        if (o_filename[0] == '0')
+            strcpy(o_filename, "output");
 
-    int winner = determine_the_winner(n, m);
-
-    printf("Write the output file (0 for \"output\"): ");
-    char o_filename[20];
-    scanf("%s", o_filename);
-    if (o_filename[0] == '0')
-        strcpy(o_filename, "output");
-
-    FILE * write = fopen(o_filename, "w");
-     if (write == NULL)
-     {
-         puts("Error! Cannot open output file. Input interrupted.\n");
-         menu_circle_game();
+        FILE * write = fopen(o_filename, "w");
+        if (write == NULL)
+        {
+             puts("Error! Cannot open output file. Input interrupted.\n");
+             menu_circle_game();
+        }
+        else
+        {
+            int winner = determine_the_winner(n, m);
+            fprintf(write, "#%d won this game", winner);
+            fclose(write);
+            printf("Check result in %s\n\n", o_filename);
+        }
     }
-    fprintf(write, "#%d won this game", winner);
-    fclose(write);
-    printf("Check result in %s\n\n", o_filename);
 }
 
 void show_circle_game(int winner)

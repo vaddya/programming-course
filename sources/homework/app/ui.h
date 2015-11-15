@@ -9,6 +9,7 @@
 #include "ui_time.h"
 #include "ui_palindrome.h"
 #include "ui_circle_game.h"
+#include "ui_phrases.h"
 
 void main_menu();
 void help();

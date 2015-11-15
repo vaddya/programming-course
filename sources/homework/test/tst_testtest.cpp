@@ -4,6 +4,7 @@
 #include "circle_game.h"
 #include "inch_to_cm.h"
 #include "palindrome.h"
+#include "phrases.h"
 
 class TestTest : public QObject
 {
@@ -17,6 +18,7 @@ private Q_SLOTS:
     void test_palindrome();
     void test_time();
     void test_circle_game();
+    void test_phrases();
 };
 
 TestTest::TestTest()
@@ -54,6 +56,13 @@ void TestTest::test_circle_game()
     QCOMPARE(determine_the_winner(3, 5), 1);
     QCOMPARE(determine_the_winner(32, 5), 13);
     QCOMPARE(determine_the_winner(9, 45), 7);
+}
+
+void TestTest::test_phrases()
+{
+    char str[100] = "check.Check check. check. check check. Check.check.";
+    upper_case_phrases(str);
+    QCOMPARE(str, "Check.Check check. Check. Check check. Check.Check.");
 }
 
 QTEST_APPLESS_MAIN(TestTest)

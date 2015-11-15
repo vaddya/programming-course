@@ -85,3 +85,45 @@ int cli_circle_game(int argc, char* argv[])
     }
     return 0;
 }
+
+int cli_phrases(int argc, char* argv[])
+{
+    if (argc == 3) argc++;
+    if (attempt_parameter("--upper_phrases", "-u", argv[1], 3, argc))
+    {
+        if ((attempt_parameter("--upper_phrases", "-u", argv[1], 3, argc)) == -1)
+        {
+            puts("Not enough arguments! Type --help (-h) for usage.");
+            return 1;
+        }
+        char str[100];
+        FILE * read;
+
+        if ((read = fopen(argv[2], "r")) == NULL)
+        {
+            puts("Error! Cannot open input file. Input interrupted.\n");
+        }
+        else
+        {
+            fgets(str, 99, read);
+            fclose(read);
+            char o_filename[20] = "output";
+            if (argc > 4)
+                strcpy(o_filename, argv[3]);
+            FILE * write = fopen(o_filename, "w");
+            if (write == NULL)
+            {
+                 puts("Error! Cannot open output file. Input interrupted.\n");
+            }
+            else
+            {
+                upper_case_phrases(str);
+                fprintf(write, "%s", str);
+                fclose(write);
+                printf("Check result in %s\n", o_filename);
+            }
+        }
+        return 1;
+    }
+    return 0;
+}
