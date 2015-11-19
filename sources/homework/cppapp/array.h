@@ -1,7 +1,6 @@
 #ifndef ARRAY_H
 #define ARRAY_H
 
-
 class Array
 {
 private:
@@ -10,14 +9,14 @@ private:
 public:
     Array();
     Array(int);
+    Array(Array &);
     void Copy(Array &);
-    int GetItem(int);
+    int operator[](int) const;
     ~Array();
 
     void EnterArray();
     void EnterArray(int);
-    void ShowArray();
-    int GetSize();
+    int GetSize() const;
     void AddItem(int);
 };
 
