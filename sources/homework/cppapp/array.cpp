@@ -15,18 +15,24 @@ Array::Array(int sz)
     arr = new int[size];
 }
 
+Array::Array(Array & array2)
+{
+    size = array2.GetSize();
+    arr = new int [size];
+    for (int i = 0; i < size; i++)
+        arr[i] = array2[i];
+}
+
 void Array::Copy(Array & array2)
 {
     delete [] arr;
     size = array2.GetSize();
     arr = new int [size];
     for (int i = 0; i < size; i++)
-    {
-        arr[i] = array2.GetItem(i);
-    }
+        arr[i] = array2[i];
 }
 
-int Array::GetItem(int i)
+int Array::operator[](int i) const
 {
     return arr[i];
 }
@@ -57,15 +63,7 @@ void Array::EnterArray(int sz)
     }
 }
 
-void Array::ShowArray()
-{
-    for (int i = 0; i < size; i++)
-//        cout << "#" << i+1 << " " << arr[i] << endl;
-        cout << arr[i] << " ";
-    cout << endl;
-}
-
-int Array::GetSize()
+int Array::GetSize() const
 {
     return size;
 }
@@ -80,7 +78,7 @@ void Array::AddItem(int newItem)
     arr = new int [size];
 
     for (int i = 0; i < size-1; i++)
-        arr[i] = arr2.GetItem(i);
+        arr[i] = arr2[i];
     arr[size-1] = newItem;
 }
 
