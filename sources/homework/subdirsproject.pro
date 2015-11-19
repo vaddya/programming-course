@@ -6,4 +6,5 @@ test.depends = library
 SUBDIRS += \
     app \
     library \
-    test
+    test \
+    cppapp
