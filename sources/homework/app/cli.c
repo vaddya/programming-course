@@ -108,7 +108,7 @@ int cli_phrases(int argc, char* argv[])
             fgets(str, 99, read);
             fclose(read);
             char o_filename[20] = "output";
-            if (argc > 4)
+            if (argc > 3)
                 strcpy(o_filename, argv[3]);
             FILE * write = fopen(o_filename, "w");
             if (write == NULL)
