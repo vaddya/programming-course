@@ -7,4 +7,6 @@ SUBDIRS += \
     app \
     library \
     test \
-    cppapp
+    cpplib \
+    cppapp \
+    cpptest

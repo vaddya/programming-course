@@ -1,14 +1,22 @@
+#-------------------------------------------------
+#
+# Project created by QtCreator 2015-11-20T13:17:15
+#
+#-------------------------------------------------
+
+QT       += testlib
+
+QT       -= gui
+
+TARGET = tst_cpptesttest
+CONFIG   += console
+CONFIG   -= app_bundle
+
 TEMPLATE = app
-CONFIG += console c++11
-CONFIG -= app_bundle
-CONFIG -= qt
 
-SOURCES += main.cpp \
-    arrayappdemo.cpp
 
-HEADERS += \
-    arrayappdemo.h
-
+SOURCES += tst_cpptesttest.cpp
+DEFINES += SRCDIR=\\\"$$PWD/\\\"
 
 win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../cpplib/release/ -lcpplib
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../cpplib/debug/ -lcpplib
