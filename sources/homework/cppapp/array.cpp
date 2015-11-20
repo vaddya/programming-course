@@ -3,6 +3,21 @@
 
 using namespace std;
 
+void Array::SetSize(int sz)
+{
+    size = sz;
+}
+
+void Array::SetArr(int * array)
+{
+    arr = array;
+}
+
+void Array::SetItem(int i, int item)
+{
+    arr[i] = item;
+}
+
 Array::Array()
 {
     size = 0;
@@ -40,27 +55,6 @@ int Array::operator[](int i) const
 Array::~Array()
 {
     delete [] arr;
-}
-
-void Array::EnterArray()
-{
-    for (int i = 0; i < size; i++)
-    {
-        cout << "#" << i+1 << " ";
-        cin >> arr[i];
-    }
-}
-
-void Array::EnterArray(int sz)
-{
-    delete [] arr;
-    size = sz;
-    arr = new int [size];
-    for (int i = 0; i < size; i++)
-    {
-        cout << "#" << i+1 << " ";
-        cin >> arr[i];
-    }
 }
 
 int Array::GetSize() const
