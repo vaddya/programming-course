@@ -2,7 +2,6 @@
 
 int is_palindrome(char * number)
 {
-    int flag = 1;
     int len = strlen(number);
     int halflen = len / 2;
 
@@ -10,8 +9,7 @@ int is_palindrome(char * number)
     for (i = 0; i < halflen; i++)
         if (number[i] != number[len - i - 1])
         {
-            flag = 0;
-            break;
+            return(0);
         }
-    return(flag);
+    return(1);
 }

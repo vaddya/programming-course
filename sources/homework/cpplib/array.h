@@ -5,12 +5,13 @@ class Array
 {
 private:
     int size;
+    /// arr??? опять экономите?
     int * arr;
 
 protected:
     void SetSize(int);
     void SetArr(int *);
-    void SetItem(int, int);
+    void SetItem(const int, const int);
 
 public:
     Array();

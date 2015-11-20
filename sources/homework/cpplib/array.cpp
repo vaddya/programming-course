@@ -3,9 +3,10 @@
 
 using namespace std;
 
-void Array::SetSize(int sz)
+void Array::SetSize(int size)
 {
-    size = sz;
+    /// можно так (и в других подобных местах)
+    this->size = size;
 }
 
 void Array::SetArr(int * array)
@@ -13,11 +14,13 @@ void Array::SetArr(int * array)
     arr = array;
 }
 
-void Array::SetItem(int i, int item)
+/// здесь и i и item можно отменить const (и в других подобных местах)
+void Array::SetItem(const int i, const int item)
 {
     arr[i] = item;
 }
 
+/// может быть по умолчанию создавать не совсем пустой массив?
 Array::Array()
 {
     size = 0;
@@ -30,6 +33,7 @@ Array::Array(int sz)
     arr = new int[size];
 }
 
+/// Назовите array2 просто array и используйте this->
 Array::Array(Array & array2)
 {
     size = array2.GetSize();
