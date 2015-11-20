@@ -35,6 +35,8 @@ void TestTest::test_inch_to_cm()
     QCOMPARE(meter.mm, 5.4);
 }
 
+/// А есть тест для "не палиндрома"?
+/// вдруг ваша функция is_palindrome делает всегда return 1?
 void TestTest::test_palindrome()
 {
     char number[20] = "2311441132";
