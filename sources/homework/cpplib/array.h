@@ -5,8 +5,7 @@ class Array
 {
 private:
     int size;
-    /// arr??? опять экономите?
-    int * arr;
+    int * ptn;
 
 protected:
     void SetSize(int);
@@ -22,6 +21,8 @@ public:
     int operator[](int) const;
     void AddItem(int);
     ~Array();
+    int *getArr() const;
+    void setArr(int *value);
 };
 
 #endif // ARRAY_H

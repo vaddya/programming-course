@@ -4,6 +4,14 @@
 /// Нельзя ли это разбить на несколько private методов и их вызывать из Demo()?
 /// так как есть не читается,
 /// сложно понять, что там происходит с первого взгляда
+
+void ArrayAppDemo::ShowArray() const
+{
+    for (int i = 0; i < GetSize(); i++)
+        cout << (*this)[i] << " ";
+    cout << endl;
+}
+
 void ArrayAppDemo::Demo()
 {
     ArrayApp array1;

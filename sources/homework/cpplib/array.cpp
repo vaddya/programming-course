@@ -3,62 +3,69 @@
 
 using namespace std;
 
+int *Array::getArr() const
+{
+    return ptn;
+}
+
+void Array::setArr(int *value)
+{
+    ptn = value;
+}
+
 void Array::SetSize(int size)
 {
-    /// можно так (и в других подобных местах)
     this->size = size;
 }
 
-void Array::SetArr(int * array)
+void Array::SetArr(int * array2)
 {
-    arr = array;
+    ptn = array2;
 }
 
-/// здесь и i и item можно отменить const (и в других подобных местах)
 void Array::SetItem(const int i, const int item)
 {
-    arr[i] = item;
+    ptn[i] = item;
 }
 
 /// может быть по умолчанию создавать не совсем пустой массив?
 Array::Array()
 {
     size = 0;
-    arr = NULL;
+    ptn = NULL;
 }
 
-Array::Array(int sz)
+Array::Array(int size)
 {
-    size = sz;
-    arr = new int[size];
+    this->size = size;
+    ptn = new int[this->size];
 }
 
-/// Назовите array2 просто array и используйте this->
-Array::Array(Array & array2)
+Array::Array(Array & array)
 {
-    size = array2.GetSize();
-    arr = new int [size];
+    size = array.GetSize();
+    ptn = new int [size];
     for (int i = 0; i < size; i++)
-        arr[i] = array2[i];
+        ptn[i] = array[i];
 }
 
-void Array::Copy(Array & array2)
+void Array::Copy(Array & array)
 {
-    delete [] arr;
-    size = array2.GetSize();
-    arr = new int [size];
+    delete [] ptn;
+    size = array.GetSize();
+    ptn = new int [size];
     for (int i = 0; i < size; i++)
-        arr[i] = array2[i];
+        ptn[i] = array[i];
 }
 
 int Array::operator[](int i) const
 {
-    return arr[i];
+    return ptn[i];
 }
 
 Array::~Array()
 {
-    delete [] arr;
+    delete [] ptn;
 }
 
 int Array::GetSize() const
@@ -68,21 +75,15 @@ int Array::GetSize() const
 
 void Array::AddItem(int newItem)
 {
-
-    /// меня путает в одном методе и Array arr2 и int* arr
-    /// Не используйте цифру в конце, а используйте this->
-    /// и может быть переименовать внутренний массив, чтобы меньше путать с названием класса?
-    ///
-    /// Пока я не понимаю, что тут происходит :)
     Array arr2;
     arr2.Copy(*this);
 
-    delete [] arr;
+    delete [] ptn;
     size++;
-    arr = new int [size];
+    ptn = new int [size];
 
     for (int i = 0; i < size-1; i++)
-        arr[i] = arr2[i];
-    arr[size-1] = newItem;
+        ptn[i] = arr2[i];
+    ptn[size-1] = newItem;
 }
 

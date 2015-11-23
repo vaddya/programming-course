@@ -7,8 +7,10 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-class ArrayAppDemo
+class ArrayAppDemo : public ArrayApp
 {
+private:
+    void ShowArray() const;
 public:
     void Demo();
 };

@@ -6,7 +6,6 @@
 class ArrayApp : public Array
 {
 public:
-    void ShowArray() const;
     void EnterArray();
     void EnterArray(int);
 };
