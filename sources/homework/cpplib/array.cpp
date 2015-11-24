@@ -28,11 +28,12 @@ void Array::set_item(const int i, const int item)
     ptn[i] = item;
 }
 
-/// может быть по умолчанию создавать не совсем пустой массив?
 Array::Array()
 {
-    size = 0;
-    ptn = NULL;
+    size = 10;
+    ptn = new int[size];
+    for (int i = 0; i < size; i++)
+        ptn[i] = 0;
 }
 
 Array::Array(int size)

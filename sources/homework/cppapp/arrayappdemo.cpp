@@ -36,9 +36,16 @@ void ArrayAppDemo::demo()
 
 void ArrayAppDemo::check_creating()
 {
-    ArrayAppDemo array1;
+    ArrayAppDemo array0;
     cout << "CHECK THE CREATING FUNCTION" << endl
-         << "Creating Array1 with fixed size 3:" << endl
+        << "Creating Array0 without parameters:" << endl
+        << "Array 0" << endl;
+    array0.show_array();
+    cout << endl;
+
+
+    ArrayAppDemo array1;
+    cout << "Creating Array1 with fixed size 3:" << endl
          << "Array 1" << endl;
     array1.enter_array(3);
     array1.show_array();
