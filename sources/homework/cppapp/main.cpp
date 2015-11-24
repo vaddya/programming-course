@@ -8,6 +8,6 @@
 int main()
 {
     ArrayAppDemo Check;
-    Check.Demo();
+    Check.demo();
     return 0;
 }

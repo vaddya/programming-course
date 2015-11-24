@@ -33,13 +33,13 @@ CpptestTest::CpptestTest()
 void CpptestTest::TestArrayAppDemo()
 {
     ArrayApp array;
-    array.AddItem(5);
-    array.AddItem(6);
-    array.AddItem(7);
-    QCOMPARE(array.GetSize(), 3);
+    array.add_item(5);
+    array.add_item(6);
+    array.add_item(7);
+    QCOMPARE(array.get_size(), 3);
     ArrayApp array2;
-    array2.Copy(array);
-    QCOMPARE(array.GetSize(), 3);
+    array2.copy(array);
+    QCOMPARE(array.get_size(), 3);
     QCOMPARE(array[2], 7);
 }
 

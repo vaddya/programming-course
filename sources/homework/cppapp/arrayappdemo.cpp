@@ -1,52 +1,102 @@
 #include "arrayappdemo.h"
 
-
-/// Нельзя ли это разбить на несколько private методов и их вызывать из Demo()?
-/// так как есть не читается,
-/// сложно понять, что там происходит с первого взгляда
-
-void ArrayAppDemo::ShowArray() const
+void ArrayAppDemo::demo()
 {
-    for (int i = 0; i < GetSize(); i++)
-        cout << (*this)[i] << " ";
-    cout << endl;
+    int num;
+    puts("Main menu. Choose a task:");
+    puts("1. Check the creating function");
+    puts("2. Check the copy function");
+    puts("3. Check the function of adding item");
+    puts("0. Exit");
+    printf(">>> ");
+    if (scanf("%d", &num) == 1)
+    {
+        switch (num)
+        {
+        case 0:
+            break;
+        case 1:
+            check_creating(); demo(); break;
+        case 2:
+            check_copy(); demo(); break;
+        case 3:
+            check_additem(); demo(); break;
+        default:
+            puts("Error! Invalid number.\n"); demo(); break;
+        }
+    }
+    else
+    {
+        puts("Error! Input a number.\n");
+        cin.clear();
+        while(cin.get() != '\n');
+        demo();
+    }
 }
 
-void ArrayAppDemo::Demo()
+void ArrayAppDemo::check_creating()
 {
-    ArrayApp array1;
-    cout << "Array 1" << endl;
-    array1.EnterArray(3);
-    cout << "Size: " << array1.GetSize() << endl;
-    array1.ShowArray();
+    ArrayAppDemo array1;
+    cout << "CHECK THE CREATING FUNCTION" << endl
+         << "Creating Array1 with fixed size 3:" << endl
+         << "Array 1" << endl;
+    array1.enter_array(3);
+    array1.show_array();
     cout << endl;
 
-    ArrayApp array2;
-    cout << "Array 2" << endl;
-    cout << "Enter size of array: ";
+    ArrayAppDemo array2;
+    cout << "Creating Array2 with user's size:" << endl
+         << "Array 2" << endl
+         << "Enter size of array: ";
     int num;
     cin >> num;
-    array2.EnterArray(num);
-    cout << "Size: " << array2.GetSize() << endl;
-    array2.ShowArray();
+    array2.enter_array(num);
+    array2.show_array();
     cout << endl;
 
-    array2.Copy(array1);
-    cout << "Array 2 after copying: " << endl;
-    cout << "Size: " << array2.GetSize() << endl;
-    array2.ShowArray();
-    cout << endl;
-
-    cout << "Adding item to 2 array: " << endl;
-    cout << "Enter new item: ";
-    int newitem;
-    cin >> newitem;
-    array2.AddItem(newitem);
-    cout << "Array 2 after adding" << endl;
-    cout << "Size: " << array2.GetSize() << endl;
-    array2.ShowArray();
-    cout << "New item: " << array2[3] << endl;
-
+    ArrayAppDemo array3(array2);
+    cout << "Creating Array3 using an existing Array2:" << endl
+         << "Array 3" << endl;
+    array3.show_array();
     cout << endl;
 }
 
+void ArrayAppDemo::check_copy()
+{
+    ArrayAppDemo array1;
+    cout << "CHECK THE COPY FUNCTIOIN" << endl
+         << "Make Array1 with size 3:" << endl;
+    array1.enter_array(3);
+    array1.show_array();
+
+    ArrayAppDemo array2;
+    cout << "Copying Array1 to Array2" << endl;
+    array2.copy(array1);
+    cout << "Array2:" << endl;
+    array2.show_array();
+    cout << endl;
+}
+
+void ArrayAppDemo::check_additem()
+{
+    ArrayAppDemo array;
+    cout << "CHECK THE FUNCTION OF ADDING ITEM" << endl
+         << "Make Array with size 3:" << endl;
+    array.enter_array(3);
+    array.show_array();
+    cout << endl << "Now enter a new item: ";
+    int newitem;
+    cin >> newitem;
+    array.add_item(newitem);
+    cout << "Array 2 after adding" << endl;
+    array.show_array();
+    cout << endl;
+}
+
+void ArrayAppDemo::show_array() const
+{
+    cout << "Size: " << get_size() << ": [ ";
+    for (int i = 0; i < get_size(); i++)
+        cout << (*this)[i] << " ";
+    cout << "]" << endl;
+}

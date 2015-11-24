@@ -8,21 +8,21 @@ private:
     int * ptn;
 
 protected:
-    void SetSize(int);
-    void SetArr(int *);
-    void SetItem(const int, const int);
+    void set_size(int);
+    void set_ptn(int *);
+    void set_item(const int, const int);
 
 public:
     Array();
     Array(int);
     Array(Array &);
-    int GetSize() const;
-    void Copy(Array &);
+    int get_size() const;
+    void copy(Array &);
     int operator[](int) const;
-    void AddItem(int);
+    void add_item(int);
     ~Array();
-    int *getArr() const;
-    void setArr(int *value);
+    int *get_arr() const;
+    void set_arr(int *value);
 };
 
 #endif // ARRAY_H

@@ -10,9 +10,12 @@ using std::endl;
 class ArrayAppDemo : public ArrayApp
 {
 private:
-    void ShowArray() const;
+    void check_creating();
+    void check_copy();
+    void check_additem();
+    void show_array() const;
 public:
-    void Demo();
+    void demo();
 };
 
-#endif // ARRAYAPPDEMO_H
+#endif

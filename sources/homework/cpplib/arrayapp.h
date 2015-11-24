@@ -6,8 +6,8 @@
 class ArrayApp : public Array
 {
 public:
-    void EnterArray();
-    void EnterArray(int);
+    void enter_array();
+    void enter_array(int);
 };
 
 #endif // ARRAYAPP_H

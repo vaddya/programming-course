@@ -3,27 +3,27 @@
 
 using namespace std;
 
-int *Array::getArr() const
+int *Array::get_arr() const
 {
     return ptn;
 }
 
-void Array::setArr(int *value)
+void Array::set_arr(int *value)
 {
     ptn = value;
 }
 
-void Array::SetSize(int size)
+void Array::set_size(int size)
 {
     this->size = size;
 }
 
-void Array::SetArr(int * array2)
+void Array::set_ptn(int * array2)
 {
     ptn = array2;
 }
 
-void Array::SetItem(const int i, const int item)
+void Array::set_item(const int i, const int item)
 {
     ptn[i] = item;
 }
@@ -43,16 +43,16 @@ Array::Array(int size)
 
 Array::Array(Array & array)
 {
-    size = array.GetSize();
+    size = array.get_size();
     ptn = new int [size];
     for (int i = 0; i < size; i++)
         ptn[i] = array[i];
 }
 
-void Array::Copy(Array & array)
+void Array::copy(Array & array)
 {
     delete [] ptn;
-    size = array.GetSize();
+    size = array.get_size();
     ptn = new int [size];
     for (int i = 0; i < size; i++)
         ptn[i] = array[i];
@@ -68,15 +68,15 @@ Array::~Array()
     delete [] ptn;
 }
 
-int Array::GetSize() const
+int Array::get_size() const
 {
     return size;
 }
 
-void Array::AddItem(int newItem)
+void Array::add_item(int newItem)
 {
     Array arr2;
-    arr2.Copy(*this);
+    arr2.copy(*this);
 
     delete [] ptn;
     size++;

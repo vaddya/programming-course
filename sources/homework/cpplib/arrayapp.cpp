@@ -1,34 +1,26 @@
 #include "arrayapp.h"
 using namespace std;
 
-
-void ArrayApp::ShowArray() const
-{
-    for (int i = 0; i < GetSize(); i++)
-        cout << (*this)[i] << " ";
-    cout << endl;
-}
-
-void ArrayApp::EnterArray()
+void ArrayApp::enter_array()
 {
     int item;
-    for (int i = 0; i < GetSize(); i++)
+    for (int i = 0; i < get_size(); i++)
     {
         cout << "#" << i+1 << " ";
         cin >> item;
-        SetItem(i, item);
+        set_item(i, item);
     }
 }
 
-void ArrayApp::EnterArray(int sz)
+void ArrayApp::enter_array(int sz)
 {
-    SetSize(sz);
-    SetArr(new int [sz]);
+    set_size(sz);
+    set_ptn(new int [sz]);
     int item;
     for (int i = 0; i < sz; i++)
     {
         cout << "#" << i+1 << " ";
         cin >> item;
-        SetItem(i, item);
+        set_item(i, item);
     }
 }
