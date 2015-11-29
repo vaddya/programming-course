@@ -1,26 +1,14 @@
 #include "array.h"
 #include "iostream"
 
-using namespace std;
-
-int *Array::get_arr() const
-{
-    return ptn;
-}
-
-void Array::set_arr(int *value)
-{
-    ptn = value;
-}
-
 void Array::set_size(int size)
 {
     this->size = size;
 }
 
-void Array::set_ptn(int * array2)
+void Array::set_ptn(int * ptn)
 {
-    ptn = array2;
+    this->ptn = ptn;
 }
 
 void Array::set_item(const int i, const int item)
@@ -40,6 +28,8 @@ Array::Array(int size)
 {
     this->size = size;
     ptn = new int[this->size];
+    for (int i = 0; i < this->size; i++)
+        ptn[i] = 0;
 }
 
 Array::Array(Array & array)

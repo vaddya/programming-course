@@ -1,5 +1,4 @@
 #include "arrayapp.h"
-using namespace std;
 
 void ArrayApp::enter_array()
 {

@@ -3,6 +3,8 @@
 #include "array.h"
 #include "iostream"
 
+using namespace std;
+
 class ArrayApp : public Array
 {
 public:

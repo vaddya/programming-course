@@ -102,7 +102,7 @@ void ArrayAppDemo::check_additem()
 
 void ArrayAppDemo::show_array() const
 {
-    cout << "Size: " << get_size() << ": [ ";
+    cout << "Size = " << get_size() << ": [ ";
     for (int i = 0; i < get_size(); i++)
         cout << (*this)[i] << " ";
     cout << "]" << endl;
