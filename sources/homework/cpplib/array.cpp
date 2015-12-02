@@ -3,6 +3,7 @@
 
 void Array::set_size(int size)
 {
+    /// вот размер вы увеличили, а массив для размещения данных?
     this->size = size;
 }
 
@@ -16,6 +17,7 @@ void Array::set_item(const int i, const int item)
     ptn[i] = item;
 }
 
+/// Лучше сделать конструктор с параметрами по умолчанию
 Array::Array()
 {
     size = 10;

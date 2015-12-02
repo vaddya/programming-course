@@ -100,6 +100,7 @@ void ArrayAppDemo::check_additem()
     cout << endl;
 }
 
+/// Я бы перенесла этот метод в ArrayApp
 void ArrayAppDemo::show_array() const
 {
     cout << "Size = " << get_size() << ": [ ";
