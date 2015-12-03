@@ -35,27 +35,24 @@ void TestTest::test_inch_to_cm()
     QCOMPARE(meter.mm, 5.4);
 }
 
-/// А есть тест для "не палиндрома"?
-/// вдруг ваша функция is_palindrome делает всегда return 1?
+void TestTest::test_time()
+{
+    double velocity[3] = {60, 80, 100};
+    double time[3] = {4, 2, 5};
+    QCOMPARE(calculating_time(velocity, time), 6.5);
+}
+
 void TestTest::test_palindrome()
 {
     char number[20] = "2311441132";
     QVERIFY2(is_palindrome(number), "Failed palindrome");
-    strcpy(number, "155434551");
-    QVERIFY2(is_palindrome(number), "Failed palindrome");
-}
-
-void TestTest::test_time()
-{
-    double velocity[3] = {50, 100, 150};
-    double time[3] = {1, 1, 1};
-    QCOMPARE(calculating_time(velocity, time), 2.00);
+    strcpy(number, "525321");
+    QVERIFY2(!is_palindrome(number), "Failed palindrome");
 }
 
 void TestTest::test_circle_game()
 {
     QCOMPARE(determine_the_winner(5, 3), 4);
-    QCOMPARE(determine_the_winner(3, 5), 1);
     QCOMPARE(determine_the_winner(32, 5), 13);
     QCOMPARE(determine_the_winner(9, 45), 7);
 }

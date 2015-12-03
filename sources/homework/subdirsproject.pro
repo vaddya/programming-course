@@ -5,8 +5,8 @@ test.depends = library
 #Нужно дописать зависимости для cpp*
 
 SUBDIRS += \
-    app \
     library \
+    app \
     test \
     cpplib \
     cppapp \

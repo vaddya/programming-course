@@ -39,14 +39,14 @@ void input_time()
 {
     double velocity[NUMBER_OF_PIECES];
     double time[NUMBER_OF_PIECES];
-    printf("Input velocity and time:");
+    puts("Input velocity and time:");
     int i;
     for (i = 0; i < NUMBER_OF_PIECES ; i++)
     {
+        printf("V[%d] = ", i+1);
+        scanf("%lf", &velocity[i]);
         printf("T[%d] = ", i+1);
         scanf("%lf", &time[i]);
-        printf("\nV[%d] = ", i+1);
-        scanf("%lf", &velocity[i]);
     }
     double total_time = calculating_time(velocity, time);
     show_time(total_time);
