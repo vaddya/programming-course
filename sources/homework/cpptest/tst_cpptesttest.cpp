@@ -9,19 +9,19 @@ class CpptestTest : public QObject
 public:
     CpptestTest();
 
-private Q_SLOTS:
+private Q_SLOTS:/*
     void TestGetSize();
     void TestSetSize();
     void TestSetItem();
     void TestGetItem();
     void TestCopying();
-    void TestAdding();
+    void TestAdding();*/
 };
 
 CpptestTest::CpptestTest()
 {
 }
-
+/*
 void CpptestTest::TestGetSize()
 {
     Array array(6);
@@ -70,7 +70,7 @@ void CpptestTest::TestAdding()
     array.add_item(5);
     QCOMPARE(array.get_size(), 11);
     QCOMPARE(array[10], 5);
-}
+}*/
 
 QTEST_APPLESS_MAIN(CpptestTest)
 

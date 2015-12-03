@@ -1,6 +1,6 @@
 #include "arrayappdemo.h"
 
-void ArrayAppDemo::demo()
+/*void ArrayAppDemo::demo()
 {
     int num;
     puts("Main menu. Choose a task:");
@@ -98,13 +98,4 @@ void ArrayAppDemo::check_additem()
     cout << "Array 2 after adding" << endl;
     array.show_array();
     cout << endl;
-}
-
-/// Я бы перенесла этот метод в ArrayApp
-void ArrayAppDemo::show_array() const
-{
-    cout << "Size = " << get_size() << ": [ ";
-    for (int i = 0; i < get_size(); i++)
-        cout << (*this)[i] << " ";
-    cout << "]" << endl;
-}
+}*/

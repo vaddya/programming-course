@@ -7,8 +7,7 @@
 
 int main()
 {
-    /// Вы вроде везде называли переменные с маленькой буквы
-    ArrayAppDemo Check;
-    Check.demo();
+    ArrayAppDemo check;
+//    check.demo();
     return 0;
 }

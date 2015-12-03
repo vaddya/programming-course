@@ -7,7 +7,7 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-class ArrayAppDemo : public ArrayApp
+class ArrayAppDemo
 {
 private:
     void check_creating();
