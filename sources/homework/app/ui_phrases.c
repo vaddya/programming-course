@@ -1,8 +1,6 @@
 #include "ui.h"
 #include "phrases.h"
 #include "ui_phrases.h"
-#include <stdio.h>
-#include "string.h"
 
 void menu_phrases()
 {

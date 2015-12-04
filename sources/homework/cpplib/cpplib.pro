@@ -16,7 +16,8 @@ SOURCES += \
 
 HEADERS += \
     array.h \
-    arrayapp.h
+    arrayapp.h \
+    temp.h
 unix {
     target.path = /usr/lib
     INSTALLS += target
