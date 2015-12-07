@@ -10,12 +10,19 @@
 /// и метод назвать как-то типа fromInches, метод пусть принимает дюймы и раскладывает правильно по полям.
 /// set методов для полей не делать,
 
-class Segment
+class Meter
 {
     private:
         int inches;
+        int m;
+        int cm;
+        double mm;
     public:
-        Meters inches_to_meter();
+        int get_inches();
+        int gem_m();
+        int get_cm();
+        double get_mm();
+        void from_inches(int);
 };
 
 
