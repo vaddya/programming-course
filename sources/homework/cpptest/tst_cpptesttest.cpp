@@ -1,76 +1,76 @@
 #include <QString>
 #include <QtTest>
 #include "arrayapp.h"
+#include "meter.h"
+#include "circlegame.h"
+#include "number.h"
+#include "phrases.h"
+#include "route.h"
 
 class CpptestTest : public QObject
 {
     Q_OBJECT
-
-public:
-    CpptestTest();
-
-private Q_SLOTS:/*
-    void TestGetSize();
-    void TestSetSize();
-    void TestSetItem();
-    void TestGetItem();
-    void TestCopying();
-    void TestAdding();*/
+private Q_SLOTS:
+    void array();
+    void meter();
+    void route();
+    void circle_game();
+    void number();
+    void phrases();
 };
 
-CpptestTest::CpptestTest()
+void CpptestTest::array()
 {
-}
-/*
-void CpptestTest::TestGetSize()
-{
-    Array array(6);
-    QCOMPARE(array.get_size(), 6);
+    ArrayApp array(5);
+
 }
 
-void CpptestTest::TestSetSize()
+void CpptestTest::meter()
 {
-    Array array(6);
-    QCOMPARE(array.get_size(), 6);
-    array.set_size(3);
-    QCOMPARE(array.get_size(), 3);
+    Meter units;
+    units.from_inches(301);
+    QCOMPARE(units.get_m(), 7);
+    QCOMPARE(units.get_cm(), 64);
+    QCOMPARE(units.get_mm(), 5.4);
 }
 
-void CpptestTest::TestGetItem()
+void CpptestTest::route()
 {
-    Array array(4);
-    QCOMPARE(array[0], 0);
+    Route route(50, 1, 100, 1, 150, 1);
+    QCOMPARE(route.time_of_half_way(), 2.0);
+    double velocity[3] = {60, 80, 100};
+    double time[3] = {4, 2, 5};
+    Route route2(velocity, time);
+    QCOMPARE(route2.time_of_half_way(), 6.5);
 }
 
-void CpptestTest::TestSetItem()
+void CpptestTest::circle_game()
 {
-    Array array(3);
-    QCOMPARE(array[0], 0);
-    array.set_item(0, 5);
-    QCOMPARE(array[0], 5);
+    CircleGame game(5, 3);
+    QCOMPARE(game.determine_the_winner(), 4);
+    game.set_players(32);
+    game.set_kicking(5);
+    QCOMPARE(game.determine_the_winner(), 13);
 }
 
-void CpptestTest::TestCopying()
+void CpptestTest::number()
 {
-    Array array1(3);
-    array1.set_item(0, 0);
-    array1.set_item(1, 1);
-    array1.set_item(2, 2);
-    Array array2;
-    array2.copy(array1);
-    QCOMPARE(array2.get_size(), 3);
-    QCOMPARE(array2[0], 0);
-    QCOMPARE(array2[1], 1);
-    QCOMPARE(array2[2], 2);
+    Number number1("15951");
+    QCOMPARE(number1.is_palindrome(), true);
+    Number number2(15951);
+    QCOMPARE(number1.get_num(), number2.get_num());
+    Number number3(1234513);
+    QCOMPARE(number3.is_palindrome(), false);
 }
 
-void CpptestTest::TestAdding()
+void CpptestTest::phrases()
 {
-    Array array;
-    array.add_item(5);
-    QCOMPARE(array.get_size(), 11);
-    QCOMPARE(array[10], 5);
-}*/
+    string temp = "check.Check check. check. check check. Check.check.";
+    Phrases text(temp);
+    text.upper_case_phrases();
+    temp = "Check.Check check. Check. Check check. Check.Check.";
+    QCOMPARE(text.get_str(), temp);
+}
 
 QTEST_APPLESS_MAIN(CpptestTest)
 

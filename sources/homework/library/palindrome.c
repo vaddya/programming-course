@@ -8,8 +8,6 @@ int is_palindrome(char * number)
     int i = 0;
     for (i = 0; i < halflen; i++)
         if (number[i] != number[len - i - 1])
-        {
-            return(0);
-        }
-    return(1);
+            return 0;
+    return 1;
 }

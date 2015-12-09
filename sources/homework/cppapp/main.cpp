@@ -8,6 +8,6 @@
 int main()
 {
     ArrayAppDemo check;
-//    check.demo();
+    check.demo();
     return 0;
 }

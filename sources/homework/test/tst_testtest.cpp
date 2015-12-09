@@ -9,10 +9,6 @@
 class TestTest : public QObject
 {
     Q_OBJECT
-
-public:
-    TestTest();
-
 private Q_SLOTS:
     void test_inch_to_cm();
     void test_palindrome();
@@ -20,10 +16,6 @@ private Q_SLOTS:
     void test_circle_game();
     void test_phrases();
 };
-
-TestTest::TestTest()
-{
-}
 
 void TestTest::test_inch_to_cm()
 {

@@ -12,12 +12,21 @@ CONFIG += staticlib
 
 SOURCES += \
     array.cpp \
-    arrayapp.cpp
+    arrayapp.cpp \
+    meter.cpp \
+    circlegame.cpp \
+    number.cpp \
+    phrases.cpp \
+    route.cpp
 
 HEADERS += \
     array.h \
     arrayapp.h \
-    temp.h
+    meter.h \
+    circlegame.h \
+    number.h \
+    phrases.h \
+    route.h
 unix {
     target.path = /usr/lib
     INSTALLS += target
