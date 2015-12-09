@@ -23,7 +23,7 @@ int determine_the_winner(int number_of_players, int number_for_kick)
         is_player_in_game[cursor % number_of_players] = 0; // number_for_kick игрок объявляется проигравшим
         cursor += 1;
     }
-    for(i = 0; is_player_in_game[i]==0 && i < number_of_players; i++);
+    for(i = 0; i < number_of_players && is_player_in_game[i]==0; i++);
     free(is_player_in_game);
     return i + 1;
 }

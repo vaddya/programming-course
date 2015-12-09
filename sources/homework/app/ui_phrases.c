@@ -44,7 +44,6 @@ void input_console_phrases()
     puts("Input the text: ");
     scanf("%*c");
     gets(str);
-//    scanf("%s", str);
     upper_case_phrases(str);
     show_phrases(str);
     printf("\n");

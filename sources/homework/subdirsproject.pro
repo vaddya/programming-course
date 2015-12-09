@@ -2,7 +2,8 @@ TEMPLATE = subdirs
 
 app.depends = library
 test.depends = library
-#Нужно дописать зависимости для cpp*
+cppapp.depends = cpplib
+cpptest.depends = cpplib
 
 SUBDIRS += \
     library \
