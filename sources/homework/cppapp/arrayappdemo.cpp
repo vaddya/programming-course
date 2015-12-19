@@ -27,6 +27,7 @@ void ArrayAppDemo::demo()
     array2.show_array();
     cout << endl;
 
+    cout << "keck";
     ArrayApp array3(array2);
     cout << "Creating Array3 using an existing Array2:" << endl
          << "Array 3" << endl;

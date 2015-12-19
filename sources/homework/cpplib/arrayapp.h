@@ -2,7 +2,6 @@
 #define ARRAYAPP_H
 #include "array.h"
 #include "iostream"
-
 using namespace std;
 
 class ArrayApp

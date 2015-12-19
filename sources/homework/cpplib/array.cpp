@@ -3,10 +3,15 @@
 
 Array::Array(int size)
 {
-    this->size = size;
-    ptn = new int[this->size];
-    for (int i = 0; i < this->size; i++)
-        ptn[i] = 0;
+    if (size <= 0)
+        throw OutOfRange(size);
+    else
+    {
+        this->size = size;
+        ptn = new int[this->size];
+        for (int i = 0; i < this->size; i++)
+            ptn[i] = 0;
+    }
 }
 
 Array::Array(Array & array)
@@ -24,7 +29,10 @@ int Array::get_size() const
 
 void Array::set_item(const int i, const int item)
 {
-    ptn[i] = item;
+    if (i < 0 || i >= size)
+        throw OutOfRange(i);
+    else
+        ptn[i] = item;
 }
 
 void Array::operator=(Array & array)
@@ -38,7 +46,13 @@ void Array::operator=(Array & array)
 
 int Array::operator[](int i) const
 {
-    return ptn[i];
+    if (i < 0 || i >= size)
+    {
+        throw OutOfRange(i);
+        return 0;
+    }
+    else
+        return ptn[i];
 }
 
 Array::~Array()
