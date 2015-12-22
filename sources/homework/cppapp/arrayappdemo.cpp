@@ -9,7 +9,6 @@ void ArrayAppDemo::demo()
     array0.show_array();
     cout << endl;
 
-
     ArrayApp array1;
     cout << "Creating Array1 with fixed size 3:" << endl
          << "Array 1" << endl;

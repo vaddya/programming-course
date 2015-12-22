@@ -1,5 +1,5 @@
 #include "arrayapp.h"
-#include "stdlib.h"
+
 ArrayApp::ArrayApp(int size)
 {
     array = new Array(size);
