@@ -11,9 +11,11 @@ using std::exception;
 class ArrayAppDemo
 {
 private:
+     /// Где реализации?? Если не нужны, можно удалить
     void check_creating();
     void check_copy();
     void check_additem();
+    /// Почему только этот const, а остальные нет?
     void show_array() const;
 public:
     void demo();

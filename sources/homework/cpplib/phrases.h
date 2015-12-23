@@ -8,6 +8,8 @@
 #include "string"
 using namespace std;
 
+
+/// Где консты?
 class Phrases
 {
 private:

@@ -1,5 +1,6 @@
 #include "meter.h"
 
+
 Meter::Meter()
 {
     inches = 0;

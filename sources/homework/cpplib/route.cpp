@@ -2,6 +2,7 @@
 
 Route::Route(double velocity[], double time[])
 {
+    /// Почему не вектор?
     this->velocity = new double[NUMBER_OF_PIECES];
     this->time = new double[NUMBER_OF_PIECES];
     for(int i = 0; i < NUMBER_OF_PIECES; i++)

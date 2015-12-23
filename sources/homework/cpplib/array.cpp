@@ -1,6 +1,8 @@
 #include "array.h"
 #include "iostream"
 
+
+/// Можно сделать список инициализации
 Array::Array(int size)
 {
     if (size <= 0)
@@ -49,7 +51,7 @@ int Array::operator[](int i) const
     if (i < 0 || i >= size)
     {
         throw OutOfRange(i);
-        return 0;
+     ///   return 0;
     }
     else
         return ptn[i];
