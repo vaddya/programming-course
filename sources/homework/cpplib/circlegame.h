@@ -6,16 +6,18 @@
  * Круг смыкается, счет возобновляется со следующего; так  продолжается, пока в круге не останется только один человек. Найти номер этого человека.
  */
 
+#include <vector>
+using std::vector;
+
 class CircleGame
 {
 private:
     int players;
     int kicking;
 public:
-    /// можно еще констов добавить...
-    CircleGame(int, int);
-    void set_players(int);
-    void set_kicking(int);
+    CircleGame(const int, const int);
+    void set_players(const int);
+    void set_kicking(const int);
     int determine_the_winner() const;
 };
 

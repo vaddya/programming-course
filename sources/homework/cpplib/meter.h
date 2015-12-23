@@ -18,7 +18,7 @@ public:
     int get_m() const;
     int get_cm() const;
     double get_mm() const;
-    void from_inches(int);
+    void from_inches(const int);
 };
 
 #endif // METER_H

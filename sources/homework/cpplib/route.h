@@ -5,18 +5,21 @@
  * Определить, за какое время путник одолел первую половину пути, двигаясь T1 часов со скоростью V1, T2 часов со скоростью V2, T3 часов со скоростью V3.
  */
 
+#include <vector>
+using std::vector;
+
 class Route
 {
 private:
     static const int NUMBER_OF_PIECES = 3;
-    double * velocity;
-    double * time;
+    vector<double> velocity;
+    vector<double> time;
 public:
-    Route(double *, double *);
-    Route(double, double, double, double, double, double);
-    double distance();
-    double time_of_half_way();
-    ~Route();
+    Route(const double *, const double *);
+    Route(const vector<double> &, const vector<double> &);
+    Route(const double, const double, const double, const double, const double, const double);
+    double distance() const;
+    double time_of_half_way() const;
 };
 
 #endif // ROUTE_H

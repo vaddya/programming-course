@@ -17,7 +17,7 @@ Number::Number(string num)
     this->num = num;
 }
 
-bool Number::is_palindrome()
+bool Number::is_palindrome() const
 {
     int halflen = num.length() / 2;
     for (int i = 0; i < halflen; i++)
@@ -26,7 +26,7 @@ bool Number::is_palindrome()
     return true;
 }
 
-string Number::get_num()
+string Number::get_num() const
 {
     return num;
 }

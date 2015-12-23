@@ -1,11 +1,4 @@
-#include <QString>
-#include <QtTest>
-#include "arrayapp.h"
-#include "meter.h"
-#include "circlegame.h"
-#include "number.h"
-#include "phrases.h"
-#include "route.h"
+#include "tst_cpptesttest.h"
 
 class CpptestTest : public QObject
 {
@@ -19,14 +12,19 @@ private Q_SLOTS:
     void phrases();
 };
 
-/// Почему ничего не тестируется,
-/// сделайте по тесту для каждого паблик метода в классе массив
-/// И не забудьте протестировать, как кидается исключение
-/// можно это сделать с помощью макроса qverify_exception_thrown или как-то так он называется...
 void CpptestTest::array()
 {
-    ArrayApp array(5);
+    Array array1(5);
+    QCOMPARE(array1.get_size(), 5);
+    array1.set_item(1, 3);
+    QCOMPARE(array1[1], 3);
 
+    Array array2(array1);
+    QCOMPARE(array2.get_size(), 5);
+    QCOMPARE(array2[1], 3);
+
+    QVERIFY_EXCEPTION_THROWN( array2.set_item(1000, 1), std::exception );
+    QVERIFY_EXCEPTION_THROWN( Array array3(-2), std::exception );
 }
 
 void CpptestTest::meter()
@@ -42,10 +40,22 @@ void CpptestTest::route()
 {
     Route route(50, 1, 100, 1, 150, 1);
     QCOMPARE(route.time_of_half_way(), 2.0);
+
     double velocity[3] = {60, 80, 100};
     double time[3] = {4, 2, 5};
     Route route2(velocity, time);
     QCOMPARE(route2.time_of_half_way(), 6.5);
+
+    vector<double> velo(3);
+    velo.insert(velo.end(), 60);
+    velo.insert(velo.end(), 80);
+    velo.insert(velo.end(), 100);
+    vector<double> tm(3);
+    tm.insert(tm.end(), 4);
+    tm.insert(tm.end(), 2);
+    tm.insert(tm.end(), 5);
+    Route route3(velo, tm);
+    QCOMPARE(route3.time_of_half_way(), 6.5);
 }
 
 void CpptestTest::circle_game()

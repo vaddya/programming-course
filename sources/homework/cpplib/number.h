@@ -9,18 +9,16 @@
 #include "sstream"
 using namespace std;
 
-
-/// Где консты?
 class Number
 {
 private:
     string num;
-    string int_to_string(int);
+    string int_to_string(const int);
 public:
-    Number(int);
-    Number(string);
-    bool is_palindrome();
-    string get_num();
+    Number(const int);
+    Number(const string);
+    bool is_palindrome() const;
+    string get_num() const;
 };
 
 #endif // NUMBER_H

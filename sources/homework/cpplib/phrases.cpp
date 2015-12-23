@@ -1,13 +1,8 @@
 #include "phrases.h"
 
+Phrases::Phrases(string str): str(str) {}
 
-/// Можно сделать список инициализации
-Phrases::Phrases(string str)
-{
-    this->str = str;
-}
-
-string Phrases::get_str()
+string Phrases::get_str() const
 {
     return str;
 }

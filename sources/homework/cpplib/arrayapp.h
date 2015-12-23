@@ -16,4 +16,15 @@ public:
     ~ArrayApp();
 };
 
+class InvalidInput: public std::exception
+{
+public:
+    InvalidInput(int index): num(index) {}
+    int get_num() const {
+        return num;
+    }
+private:
+    int num;
+};
+
 #endif // ARRAYAPP_H

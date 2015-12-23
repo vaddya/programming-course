@@ -1,11 +1,6 @@
 #include "circlegame.h"
 
-/// Можно сделать список инициализации
-CircleGame::CircleGame(int players, int kicking)
-{
-    this->players = players;
-    this->kicking = kicking;
-}
+CircleGame::CircleGame(int players, int kicking): players(players), kicking(kicking) {}
 
 void CircleGame::set_players(int players)
 {
@@ -19,9 +14,7 @@ void CircleGame::set_kicking(int kicking)
 
 int CircleGame::determine_the_winner() const
 {
-    /// теперь уже можно вектор
-    int * is_player_in_game;
-    is_player_in_game = new int[players];
+    vector<int> is_player_in_game(players);
     int i;
     for (i = 0; i < players; i++)
     {
@@ -40,6 +33,5 @@ int CircleGame::determine_the_winner() const
         cursor += 1;
     }
     for(i = 0; is_player_in_game[i]==0 && i < players; i++);
-    delete [] is_player_in_game;
     return i + 1;
 }

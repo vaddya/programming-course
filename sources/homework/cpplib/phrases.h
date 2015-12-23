@@ -8,15 +8,13 @@
 #include "string"
 using namespace std;
 
-
-/// Где консты?
 class Phrases
 {
 private:
     string str;
 public:
-    Phrases(string);
-    string get_str();
+    Phrases(const string);
+    string get_str() const;
     void upper_case_phrases();
 };
 

@@ -1,10 +1,9 @@
 #include "route.h"
 
-Route::Route(double velocity[], double time[])
+Route::Route(const double velocity[], const double time[])
 {
-    /// Почему не вектор?
-    this->velocity = new double[NUMBER_OF_PIECES];
-    this->time = new double[NUMBER_OF_PIECES];
+    this->velocity.reserve(NUMBER_OF_PIECES);
+    this->time.reserve(NUMBER_OF_PIECES);
     for(int i = 0; i < NUMBER_OF_PIECES; i++)
     {
         this->velocity[i] = velocity[i];
@@ -12,10 +11,12 @@ Route::Route(double velocity[], double time[])
     }
 }
 
-Route::Route(double v1, double t1, double v2, double t2, double v3, double t3)
+Route::Route(const vector<double> & velocity, const vector<double> & time): velocity(velocity), time(time) {}
+
+Route::Route(const double v1, const double t1, const double v2, const double t2, const double v3, const double t3)
 {
-    this->velocity = new double[NUMBER_OF_PIECES];
-    this->time = new double[NUMBER_OF_PIECES];
+    this->velocity.reserve(NUMBER_OF_PIECES);
+    this->time.reserve(NUMBER_OF_PIECES);
     velocity[0] = v1;
     velocity[1] = v2;
     velocity[2] = v3;
@@ -24,7 +25,7 @@ Route::Route(double v1, double t1, double v2, double t2, double v3, double t3)
     time[2] = t3;
 }
 
-double Route::distance()
+double Route::distance() const
 {
     double s = 0;
     int i;
@@ -33,7 +34,7 @@ double Route::distance()
     return s;
 }
 
-double Route::time_of_half_way()
+double Route::time_of_half_way() const
 {
     double halfdist = distance()/2;
     double total_time = 0;
@@ -52,10 +53,4 @@ double Route::time_of_half_way()
         }
     }
     return total_time;
-}
-
-Route::~Route()
-{
-    delete [] velocity;
-    delete [] time;
 }
