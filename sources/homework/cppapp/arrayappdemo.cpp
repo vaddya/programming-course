@@ -1,5 +1,7 @@
 #include "arrayappdemo.h"
 
+
+/// Длинный метод, много чего делает...
 void ArrayAppDemo::demo()
 {
     ArrayApp array0;

@@ -12,6 +12,7 @@ private:
     int players;
     int kicking;
 public:
+    /// можно еще констов добавить...
     CircleGame(int, int);
     void set_players(int);
     void set_kicking(int);

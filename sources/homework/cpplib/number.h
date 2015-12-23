@@ -9,6 +9,8 @@
 #include "sstream"
 using namespace std;
 
+
+/// Где консты?
 class Number
 {
 private:
