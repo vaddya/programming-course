@@ -17,6 +17,7 @@ void ArrayApp::enter_array()
             if(cin.get() != '\n')
                 throw InvalidInput(i+1);
         }
+        ///
         catch (InvalidInput& e)
         {
             cout << "#" << e.get_num() << " invalid input, #" << e.get_num() << " = 0" << endl;

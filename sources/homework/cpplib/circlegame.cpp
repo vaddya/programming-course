@@ -1,5 +1,6 @@
 #include "circlegame.h"
 
+/// Можно сделать список инициализации
 CircleGame::CircleGame(int players, int kicking)
 {
     this->players = players;
@@ -18,6 +19,7 @@ void CircleGame::set_kicking(int kicking)
 
 int CircleGame::determine_the_winner() const
 {
+    /// теперь уже можно вектор
     int * is_player_in_game;
     is_player_in_game = new int[players];
     int i;

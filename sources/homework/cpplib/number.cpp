@@ -22,8 +22,8 @@ bool Number::is_palindrome()
     int halflen = num.length() / 2;
     for (int i = 0; i < halflen; i++)
         if (num[i] != num[num.length()-1-i])
-            return 0;
-    return 1;
+            return false;
+    return true;
 }
 
 string Number::get_num()

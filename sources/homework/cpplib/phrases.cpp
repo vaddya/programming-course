@@ -1,5 +1,7 @@
 #include "phrases.h"
 
+
+/// Можно сделать список инициализации
 Phrases::Phrases(string str)
 {
     this->str = str;
