@@ -1,0 +1,5 @@
+#ifndef TST_CPPTESTTEST_H
+#define TST_CPPTESTTEST_H
+
+#endif // TST_CPPTESTTEST_H
+
