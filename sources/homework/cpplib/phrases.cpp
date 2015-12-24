@@ -2,18 +2,11 @@
 
 Phrases::Phrases(string str): str(str) {}
 
-string Phrases::get_str() const
-{
-    return str;
-}
-
 void Phrases::upper_case_phrases()
 {
     str[0] = toupper(str[0]);
-    for (unsigned i = 0; i < str.length(); i++)
-    {
-        if (str[i] == '.')
-        {
+    for (unsigned i = 0; i < str.length(); i++) {
+        if (str[i] == '.') {
             int beginingOfSentence = i+1;
             if (str[i+1] == ' ')
                 beginingOfSentence++;

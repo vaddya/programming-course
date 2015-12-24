@@ -11,14 +11,14 @@ private:
     int m;
     int cm;
     double mm;
-    void convert_inch_to_cm();
+    void convertInchToCm();
 public:
     Meter();
-    int get_inches() const;
-    int get_m() const;
-    int get_cm() const;
-    double get_mm() const;
-    void from_inches(const int);
+    void fromInches(const int);
+    int getInches() const { return inches; }
+    int getM() const { return m; }
+    int getCm() const { return cm; }
+    double getMm() const { return mm; }
 };
 
 #endif // METER_H

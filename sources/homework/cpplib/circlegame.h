@@ -16,9 +16,9 @@ private:
     int kicking;
 public:
     CircleGame(const int, const int);
-    void set_players(const int);
-    void set_kicking(const int);
-    int determine_the_winner() const;
+    void setPlayers(const int);
+    void setKicking(const int);
+    int determineWinner() const;
 };
 
 #endif // CIRCLEGAME_H

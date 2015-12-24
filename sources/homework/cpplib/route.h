@@ -6,6 +6,7 @@
  */
 
 #include <vector>
+
 using std::vector;
 
 class Route
@@ -19,7 +20,7 @@ public:
     Route(const vector<double> &, const vector<double> &);
     Route(const double, const double, const double, const double, const double, const double);
     double distance() const;
-    double time_of_half_way() const;
+    double timeOfHalfWay() const;
 };
 
 #endif // ROUTE_H

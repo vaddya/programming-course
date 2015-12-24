@@ -10,8 +10,8 @@ private:
 public:
     Array(int size = 10);
     Array(Array &);
-    int get_size() const;
-    void set_item(const int, const int);
+    int getSize() const;
+    void setItem(const int, const int);
     void operator=(Array &);
     int operator[](int) const;
     ~Array();
@@ -21,7 +21,7 @@ class OutOfRange: public std::exception
 {
 public:
     OutOfRange(int index): num(index) {}
-    int get_num() const {
+    int getNum() const {
         return num;
     }
 private:

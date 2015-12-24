@@ -7,18 +7,20 @@
 
 #include "string"
 #include "sstream"
-using namespace std;
+
+using std::string;
+using std::ostringstream;
 
 class Number
 {
 private:
     string num;
-    string int_to_string(const int);
+    string intToString(const int);
 public:
     Number(const int);
     Number(const string);
-    bool is_palindrome() const;
-    string get_num() const;
+    bool isPalindrome() const;
+    string getNum() const { return num; }
 };
 
 #endif // NUMBER_H

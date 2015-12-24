@@ -3,7 +3,7 @@
 
 Array::Array(int size)
 {
-    if (size <= 0)
+    if (size < 0)
         throw OutOfRange(size);
     else
     {
@@ -16,18 +16,18 @@ Array::Array(int size)
 
 Array::Array(Array & array)
 {
-    size = array.get_size();
+    size = array.getSize();
     ptn = new int [size];
     for (int i = 0; i < size; i++)
         ptn[i] = array[i];
 }
 
-int Array::get_size() const
+int Array::getSize() const
 {
     return size;
 }
 
-void Array::set_item(const int i, const int item)
+void Array::setItem(const int i, const int item)
 {
     if (i < 0 || i >= size)
         throw OutOfRange(i);
@@ -38,7 +38,7 @@ void Array::set_item(const int i, const int item)
 void Array::operator=(Array & array)
 {
     delete [] ptn;
-    size = array.get_size();
+    size = array.getSize();
     ptn = new int [size];
     for (int i = 0; i < size; i++)
         ptn[i] = array[i];

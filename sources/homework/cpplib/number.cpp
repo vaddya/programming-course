@@ -1,6 +1,6 @@
 #include "number.h"
 
-string Number::int_to_string(int num)
+string Number::intToString(int num)
 {
     ostringstream temp;
     temp << num;
@@ -9,7 +9,7 @@ string Number::int_to_string(int num)
 
 Number::Number(int num)
 {
-    this->num = int_to_string(num);
+    this->num = intToString(num);
 }
 
 Number::Number(string num)
@@ -17,16 +17,11 @@ Number::Number(string num)
     this->num = num;
 }
 
-bool Number::is_palindrome() const
+bool Number::isPalindrome() const
 {
     int halflen = num.length() / 2;
     for (int i = 0; i < halflen; i++)
         if (num[i] != num[num.length()-1-i])
             return false;
     return true;
-}
-
-string Number::get_num() const
-{
-    return num;
 }

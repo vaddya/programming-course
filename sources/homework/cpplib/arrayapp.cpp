@@ -1,82 +1,66 @@
 #include "arrayapp.h"
 
-ArrayApp::ArrayApp(int size)
-{
-    array = new Array(size);
-}
+ArrayApp::ArrayApp(int size): array(new Array(size)) {}
 
-void ArrayApp::enter_array()
+void ArrayApp::enterArray()
 {
     int item;
-    for (int i = 0; i < array->get_size(); i++)
-    {
+    for (int i = 0; i < array->getSize(); i++) {
         cout << "#" << i+1 << " ";
-        try {
-            cin >> item;
-            cin.clear();
-            if(cin.get() != '\n')
-                throw InvalidInput(i+1);
-        }
-        ///
-        catch (InvalidInput& e)
-        {
-            cout << "#" << e.get_num() << " invalid input, #" << e.get_num() << " = 0" << endl;
+        cin >> item;
+        cin.clear();
+        if (cin.get() != '\n') {
+            cout << "#" << i+1 << " invalid input, #" << i+1 << " = 0" << endl;
             continue;
         }
-
         try {
-            array->set_item(i, item);
+            array->setItem(i, item);
         }
         catch (OutOfRange& e) {
-            cout << "#" << e.get_num() <<  " out of range" << endl;
+            cout << "#" << e.getNum() <<  " out of range" << endl;
             continue;
         }
     }
 }
 
-void ArrayApp::enter_array(int size)
+void ArrayApp::enterArray(int size)
 {
-    delete array;
-    try {
-        array = new Array(size);
-    }
-    catch (OutOfRange& e) {
-        cout << e.get_num() <<  " invalid size!" << endl;
-        terminate();
-    }
-
-    int item;
-    for (int i = 0; i < size; i++)
-    {
-        cout << "#" << i+1 << " ";
+    if (array->getSize() != size) {
+        delete array;
         try {
-            cin >> item;
-            cin.clear();
-            if(cin.get() != '\n')
-                throw InvalidInput(i+1);
-        }
-        catch (InvalidInput& e)
-        {
-            cout << "#" << e.get_num() << " invalid input, #" << e.get_num() << " = 0" << endl;
-            continue;
-        }
-
-        try {
-            array->set_item(i, item);
+            array = new Array(size);
         }
         catch (OutOfRange& e) {
-            cout << "#" << e.get_num() <<  " out of range" << endl;
+            cout << e.getNum() <<  " invalid size!" << endl;
+            terminate();
+        }
+    }
+
+    int item;
+    for (int i = 0; i < size; i++) {
+        cout << "#" << i+1 << " ";
+        cin >> item;
+        cin.clear();
+        if (cin.get() != '\n') {
+            cout << "#" << i+1 << " invalid input, #" << i+1 << " = 0" << endl;
+            array->setItem(i, 0);
+            continue;
+        }
+        try {
+            array->setItem(i, item);
+        }
+        catch (OutOfRange& e) {
+            cout << "#" << e.getNum() <<  " out of range" << endl;
             continue;
         }
     }
 }
 
-void ArrayApp::show_array() const
+void ArrayApp::showArray() const
 {
     int item;
-    cout << "Size = " << array->get_size() << ": [ ";
-    for (int i = 0; i < array->get_size(); i++)
-    {
+    cout << "Size = " << array->getSize() << ": [ ";
+    for (int i = 0; i < array->getSize(); i++) {
         item = array->operator[](i);
         cout << item << " ";
     }
