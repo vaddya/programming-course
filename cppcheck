@@ -1,0 +1,35 @@
+[app/cli.c:99]: (style) The scope of the variable 'str' can be reduced.
+[app/ui.c:15]: (portability) scanf without field width limits can crash with huge input data on some versions of libc.
+[app/ui_circle_game.c:15]: (portability) scanf without field width limits can crash with huge input data on some versions of libc.
+[app/ui_circle_game.c:45]: (portability) scanf without field width limits can crash with huge input data on some versions of libc.
+[app/ui_circle_game.c:47]: (portability) scanf without field width limits can crash with huge input data on some versions of libc.
+[app/ui_circle_game.c:58]: (warning) scanf without field width limits can crash with huge input data.
+[app/ui_circle_game.c:70]: (portability) scanf without field width limits can crash with huge input data on some versions of libc.
+[app/ui_circle_game.c:75]: (warning) scanf without field width limits can crash with huge input data.
+[app/ui_inch_to_cm.c:14]: (portability) scanf without field width limits can crash with huge input data on some versions of libc.
+[app/ui_inch_to_cm.c:43]: (portability) scanf without field width limits can crash with huge input data on some versions of libc.
+[app/ui_palindrome.c:14]: (portability) scanf without field width limits can crash with huge input data on some versions of libc.
+[app/ui_palindrome.c:42]: (warning) scanf without field width limits can crash with huge input data.
+[app/ui_phrases.c:54]: (style) The scope of the variable 'str' can be reduced.
+[app/ui_phrases.c:15]: (portability) scanf without field width limits can crash with huge input data on some versions of libc.
+[app/ui_phrases.c:57]: (warning) scanf without field width limits can crash with huge input data.
+[app/ui_phrases.c:74]: (warning) scanf without field width limits can crash with huge input data.
+[app/ui_phrases.c:46]: (style) Obsolete function 'gets' called. It is recommended to use the function 'fgets' instead.
+[app/ui_time.c:14]: (portability) scanf without field width limits can crash with huge input data on some versions of libc.
+[app/ui_time.c:47]: (portability) scanf without field width limits can crash with huge input data on some versions of libc.
+[app/ui_time.c:49]: (portability) scanf without field width limits can crash with huge input data on some versions of libc.
+[cpplib/array.h:15]: (style) 'Array::operator=' should return 'Array &'.
+[cpplib/arrayapp.cpp:61]: (style) The scope of the variable 'item' can be reduced.
+[cpplib/arrayapp.h:11]: (style) 'class ArrayApp' does not have a copy constructor which is recommended since the class contains a pointer to allocated memory.
+[cpplib/circlegame.cpp:33]: (style) Array index 'i' is used before limits check.
+[cpptest/tst_cpptesttest.cpp:15]: (style) The function 'array' is never used.
+[cpptest/tst_cpptesttest.cpp:62]: (style) The function 'circle_game' is never used.
+[cpplib/arrayapp.cpp:5]: (style) The function 'enterArray' is never used.
+[cpptest/tst_cpptesttest.cpp:81]: (style) The function 'phrases' is never used.
+[cpplib/arrayapp.cpp:59]: (style) The function 'showArray' is never used.
+[test/tst_testtest.cpp:45]: (style) The function 'test_circle_game' is never used.
+[test/tst_testtest.cpp:20]: (style) The function 'test_inch_to_cm' is never used.
+[test/tst_testtest.cpp:37]: (style) The function 'test_palindrome' is never used.
+[test/tst_testtest.cpp:52]: (style) The function 'test_phrases' is never used.
+[test/tst_testtest.cpp:30]: (style) The function 'test_time' is never used.
+(information) Cppcheck cannot find all the include files (use --check-config for details)
