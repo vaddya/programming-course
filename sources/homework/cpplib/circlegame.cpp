@@ -30,6 +30,6 @@ int CircleGame::determineWinner() const
         is_player_in_game[cursor % players] = 0;            // kicking игрок объявляется проигравшим
         cursor += 1;
     }
-    for (i = 0; is_player_in_game[i]==0 && i < players; i++);
+    for (i = 0; i < players && is_player_in_game[i]==0; i++);
     return i + 1;
 }

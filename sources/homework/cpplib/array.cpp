@@ -35,13 +35,14 @@ void Array::setItem(const int i, const int item)
         ptn[i] = item;
 }
 
-void Array::operator=(Array & array)
+Array & Array::operator=(Array & array)
 {
     delete [] ptn;
     size = array.getSize();
     ptn = new int [size];
     for (int i = 0; i < size; i++)
         ptn[i] = array[i];
+    return *this;
 }
 
 int Array::operator[](int i) const

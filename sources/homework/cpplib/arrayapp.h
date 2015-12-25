@@ -7,6 +7,8 @@ using std::cout;
 using std::cin;
 using std::endl;
 using std::terminate;
+using std::ostream;
+using std::istream;
 
 class ArrayApp
 {
@@ -14,21 +16,11 @@ private:
     Array * array;
 public:
     ArrayApp(int size = 10);
-    void enterArray();
-    void enterArray(const int);
-    void showArray() const;
+    void setSize(int);
     ~ArrayApp();
-};
 
-class InvalidInput: public std::exception
-{
-public:
-    InvalidInput(int index): num(index) {}
-    int getNum() const {
-        return num;
-    }
-private:
-    int num;
+    friend istream & operator>>(istream &, ArrayApp &);
+    friend ostream & operator<<(ostream &, ArrayApp &);
 };
 
 #endif // ARRAYAPP_H

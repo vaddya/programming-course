@@ -12,7 +12,7 @@ public:
     Array(Array &);
     int getSize() const;
     void setItem(const int, const int);
-    void operator=(Array &);
+    Array & operator=(Array &);
     int operator[](int) const;
     ~Array();
 };

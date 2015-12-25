@@ -12,18 +12,18 @@ void ArrayAppDemo::creatingWithoutParameter() const
     cout << "CHECK THE ARRAY" << endl
         << "Creating Array#1 without parameters:" << endl
         << "Array 0" << endl;
-    array.showArray();
+    cout << array;
     cout << endl;
 
 }
 
 void ArrayAppDemo::creatingWithFixSize() const
 {
-    ArrayApp array;
+    ArrayApp array(3);
     cout << "Creating Array#2 with fixed size 3:" << endl
          << "Array#2" << endl;
-    array.enterArray(3);
-    array.showArray();
+    cin >> array;
+    cout << array;
     cout << endl;
 }
 
@@ -35,8 +35,9 @@ void ArrayAppDemo::creatingWithUserSize() const
          << "Enter size of array: ";
     int num;
     cin >> num;
-    array.enterArray(num);
-    array.showArray();
+    array.setSize(num);
+    cin >> array;
+    cout << array;
     cout << endl;
     creatingWithExistingArray(array);
 }
@@ -46,6 +47,6 @@ void ArrayAppDemo::creatingWithExistingArray(ArrayApp & array2) const
     ArrayApp array(array2);
     cout << "Creating Array#4 using an existing Array#3:" << endl
          << "Array#4" << endl;
-    array.showArray();
+    cout << array;
     cout << endl;
 }
