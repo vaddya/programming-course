@@ -8,7 +8,7 @@ Route::Route(const double velocity[], const double time[])
         this->velocity[i] = velocity[i];
         this->time[i] = time[i];
     }
-}
+}s
 
 // Почему-то не работает, причину не обнаружил
 Route::Route(const vector<double> & velocity, const vector<double> & time): velocity(velocity), time(time) {}

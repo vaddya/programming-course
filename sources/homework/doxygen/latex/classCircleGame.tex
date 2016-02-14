@@ -1,0 +1,104 @@
+\hypertarget{classCircleGame}{}\section{Класс Circle\+Game}
+\label{classCircleGame}\index{Circle\+Game@{Circle\+Game}}
+
+
+Круговая игра  
+
+
+
+
+{\ttfamily \#include $<$circlegame.\+h$>$}
+
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCircleGame_a9d897a36adf928cf37476a49e010e7d2}{Circle\+Game} (const int num\+\_\+of\+\_\+players, const int num\+\_\+for\+\_\+kick)
+\begin{DoxyCompactList}\small\item\em Конструктор \end{DoxyCompactList}\item 
+void \hyperlink{classCircleGame_a2ce615aea3a1beea3fa059e860996e69}{set\+Players} (const int num\+\_\+of\+\_\+players)
+\begin{DoxyCompactList}\small\item\em Установить значение поля players, равное количеству игроков \end{DoxyCompactList}\item 
+void \hyperlink{classCircleGame_a43b7edb3125634862d39244d83e3b24b}{set\+Kicking} (const int num\+\_\+for\+\_\+kick)
+\begin{DoxyCompactList}\small\item\em Установить значение поля kicking, равное номеру человека, которого выводят \end{DoxyCompactList}\item 
+int \hyperlink{classCircleGame_ae7d1d1a2d931b050130ff469031aac64}{determine\+Winner} () const 
+\begin{DoxyCompactList}\small\item\em Определить победителя \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Круговая игра 
+
+По кругу располагаются num\+\_\+of\+\_\+players человек. Ведущий считает по кругу, начиная с первого, и выводит num\+\_\+for\+\_\+kick-\/го человека. Круг смыкается, счет возобновляется со следующего. Так продолжается, пока в круге не останется только один человек. Найти номер этого человека. 
+
+\subsection{Конструктор(ы)}
+\hypertarget{classCircleGame_a9d897a36adf928cf37476a49e010e7d2}{}\index{Circle\+Game@{Circle\+Game}!Circle\+Game@{Circle\+Game}}
+\index{Circle\+Game@{Circle\+Game}!Circle\+Game@{Circle\+Game}}
+\subsubsection[{Circle\+Game}]{\setlength{\rightskip}{0pt plus 5cm}Circle\+Game\+::\+Circle\+Game (
+\begin{DoxyParamCaption}
+\item[{const int}]{num\+\_\+of\+\_\+players, }
+\item[{const int}]{num\+\_\+for\+\_\+kick}
+\end{DoxyParamCaption}
+)}\label{classCircleGame_a9d897a36adf928cf37476a49e010e7d2}
+
+
+Конструктор 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em num\+\_\+of\+\_\+players} & количество игроков, учавствующих в игре \\
+\hline
+{\em num\+\_\+for\+\_\+kick} & номер человека, которого выводят из игры \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Методы}
+\hypertarget{classCircleGame_ae7d1d1a2d931b050130ff469031aac64}{}\index{Circle\+Game@{Circle\+Game}!determine\+Winner@{determine\+Winner}}
+\index{determine\+Winner@{determine\+Winner}!Circle\+Game@{Circle\+Game}}
+\subsubsection[{determine\+Winner}]{\setlength{\rightskip}{0pt plus 5cm}int Circle\+Game\+::determine\+Winner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classCircleGame_ae7d1d1a2d931b050130ff469031aac64}
+
+
+Определить победителя 
+
+Данная функция высчитывает номер игрока-\/победителя. Ожидается что значения players и kicking известны. \begin{DoxyReturn}{Возвращает}
+Номер победившего игрока 
+\end{DoxyReturn}
+\hypertarget{classCircleGame_a43b7edb3125634862d39244d83e3b24b}{}\index{Circle\+Game@{Circle\+Game}!set\+Kicking@{set\+Kicking}}
+\index{set\+Kicking@{set\+Kicking}!Circle\+Game@{Circle\+Game}}
+\subsubsection[{set\+Kicking}]{\setlength{\rightskip}{0pt plus 5cm}void Circle\+Game\+::set\+Kicking (
+\begin{DoxyParamCaption}
+\item[{const int}]{num\+\_\+for\+\_\+kick}
+\end{DoxyParamCaption}
+)}\label{classCircleGame_a43b7edb3125634862d39244d83e3b24b}
+
+
+Установить значение поля kicking, равное номеру человека, которого выводят 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em num\+\_\+for\+\_\+kick} & новый номер человека, которого выводят из игры \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCircleGame_a2ce615aea3a1beea3fa059e860996e69}{}\index{Circle\+Game@{Circle\+Game}!set\+Players@{set\+Players}}
+\index{set\+Players@{set\+Players}!Circle\+Game@{Circle\+Game}}
+\subsubsection[{set\+Players}]{\setlength{\rightskip}{0pt plus 5cm}void Circle\+Game\+::set\+Players (
+\begin{DoxyParamCaption}
+\item[{const int}]{num\+\_\+of\+\_\+players}
+\end{DoxyParamCaption}
+)}\label{classCircleGame_a2ce615aea3a1beea3fa059e860996e69}
+
+
+Установить значение поля players, равное количеству игроков 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em num\+\_\+of\+\_\+players} & новое количество игроков, учавствующих в игре \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+cpplib/circlegame.\+h\item 
+cpplib/circlegame.\+cpp\end{DoxyCompactItemize}

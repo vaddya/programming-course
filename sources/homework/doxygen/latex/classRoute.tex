@@ -1,0 +1,138 @@
+\hypertarget{classRoute}{}\section{Класс Route}
+\label{classRoute}\index{Route@{Route}}
+
+
+Расчет времени, затраченного на первую половину пути  
+
+
+
+
+{\ttfamily \#include $<$route.\+h$>$}
+
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRoute_adbe31517764e0b91c1d5d9935021f3d2}{Route} (const double velocity\mbox{[}$\,$\mbox{]}, const double time\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Конструктор, получающий массивы \end{DoxyCompactList}\item 
+\hyperlink{classRoute_a515807cf7ed5d70f96c7845db65a6a65}{Route} (const vector$<$ double $>$ \&velocity, const vector$<$ double $>$ \&time)
+\begin{DoxyCompactList}\small\item\em Конструктор, получающий vector. \end{DoxyCompactList}\item 
+\hyperlink{classRoute_a944926e79675629ee5f1be028d3d25ec}{Route} (const double v1, const double t1, const double v2, const double t2, const double v3, const double t3)
+\begin{DoxyCompactList}\small\item\em Конструктор, последовательно получающий скорости и время движения \end{DoxyCompactList}\item 
+double \hyperlink{classRoute_a01f944ed6f4d03165bcf48dc3cd36e77}{distance} () const 
+\begin{DoxyCompactList}\small\item\em Рассчитать расстояние движения \end{DoxyCompactList}\item 
+double \hyperlink{classRoute_a5dcc19794f0edaa06fb89a0a3d60ff70}{time\+Of\+Half\+Way} () const 
+\begin{DoxyCompactList}\small\item\em Рассчитать время, затраченное на прохождение половины пути \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Расчет времени, затраченного на первую половину пути 
+
+Определить, за какое время путник одолел первую половину пути, двигаясь T1 часов со скоростью V1, T2 часов со скоростью V2, T3 часов со скоростью V3. 
+
+\subsection{Конструктор(ы)}
+\hypertarget{classRoute_adbe31517764e0b91c1d5d9935021f3d2}{}\index{Route@{Route}!Route@{Route}}
+\index{Route@{Route}!Route@{Route}}
+\subsubsection[{Route}]{\setlength{\rightskip}{0pt plus 5cm}Route\+::\+Route (
+\begin{DoxyParamCaption}
+\item[{const double}]{velocity\mbox{[}$\,$\mbox{]}, }
+\item[{const double}]{time\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{classRoute_adbe31517764e0b91c1d5d9935021f3d2}
+
+
+Конструктор, получающий массивы 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em velocity\mbox{[}$\,$\mbox{]}} & массив, содержащий скорости на последовательных участках \\
+\hline
+{\em time\mbox{[}$\,$\mbox{]}} & массив, содержащий время движения на последовательных участках \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRoute_a515807cf7ed5d70f96c7845db65a6a65}{}\index{Route@{Route}!Route@{Route}}
+\index{Route@{Route}!Route@{Route}}
+\subsubsection[{Route}]{\setlength{\rightskip}{0pt plus 5cm}Route\+::\+Route (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ double $>$ \&}]{velocity, }
+\item[{const vector$<$ double $>$ \&}]{time}
+\end{DoxyParamCaption}
+)}\label{classRoute_a515807cf7ed5d70f96c7845db65a6a65}
+
+
+Конструктор, получающий vector. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em velocity} & вектор, содержащий скорости на последовательных участках \\
+\hline
+{\em time} & вектор, содержащий время движения на последовательных участках \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRoute_a944926e79675629ee5f1be028d3d25ec}{}\index{Route@{Route}!Route@{Route}}
+\index{Route@{Route}!Route@{Route}}
+\subsubsection[{Route}]{\setlength{\rightskip}{0pt plus 5cm}Route\+::\+Route (
+\begin{DoxyParamCaption}
+\item[{const double}]{v1, }
+\item[{const double}]{t1, }
+\item[{const double}]{v2, }
+\item[{const double}]{t2, }
+\item[{const double}]{v3, }
+\item[{const double}]{t3}
+\end{DoxyParamCaption}
+)}\label{classRoute_a944926e79675629ee5f1be028d3d25ec}
+
+
+Конструктор, последовательно получающий скорости и время движения 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em v1} & скорость на первом участке \\
+\hline
+{\em t1} & время движения на первом участке \\
+\hline
+{\em v2} & скорость на втором участке \\
+\hline
+{\em t2} & время движения на втором участке \\
+\hline
+{\em v3} & скорость на третьем участке \\
+\hline
+{\em t3} & время движения на третьем участке \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Методы}
+\hypertarget{classRoute_a01f944ed6f4d03165bcf48dc3cd36e77}{}\index{Route@{Route}!distance@{distance}}
+\index{distance@{distance}!Route@{Route}}
+\subsubsection[{distance}]{\setlength{\rightskip}{0pt plus 5cm}double Route\+::distance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classRoute_a01f944ed6f4d03165bcf48dc3cd36e77}
+
+
+Рассчитать расстояние движения 
+
+\begin{DoxyReturn}{Возвращает}
+расстояние движения 
+\end{DoxyReturn}
+\hypertarget{classRoute_a5dcc19794f0edaa06fb89a0a3d60ff70}{}\index{Route@{Route}!time\+Of\+Half\+Way@{time\+Of\+Half\+Way}}
+\index{time\+Of\+Half\+Way@{time\+Of\+Half\+Way}!Route@{Route}}
+\subsubsection[{time\+Of\+Half\+Way}]{\setlength{\rightskip}{0pt plus 5cm}double Route\+::time\+Of\+Half\+Way (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classRoute_a5dcc19794f0edaa06fb89a0a3d60ff70}
+
+
+Рассчитать время, затраченное на прохождение половины пути 
+
+\begin{DoxyReturn}{Возвращает}
+время, затраченное на половину пути 
+\end{DoxyReturn}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+cpplib/route.\+h\item 
+cpplib/route.\+cpp\end{DoxyCompactItemize}

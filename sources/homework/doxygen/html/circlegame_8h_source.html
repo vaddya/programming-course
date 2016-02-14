@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>Многомодульный проект: Исходный файл cpplib/circlegame.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.jpg"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Многомодульный проект
+   </div>
+   <div id="projectbrief">Vadim Dyachkov</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a83aadac97474b7642daca132ab01769.html">cpplib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">circlegame.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CIRCLEGAME_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CIRCLEGAME_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> std::vector;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classCircleGame.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCircleGame.html">CircleGame</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">int</span> players;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">int</span> kicking;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classCircleGame.html#a9d897a36adf928cf37476a49e010e7d2">CircleGame</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> num_of_players, <span class="keyword">const</span> <span class="keywordtype">int</span> num_for_kick);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCircleGame.html#a2ce615aea3a1beea3fa059e860996e69">setPlayers</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> num_of_players);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCircleGame.html#a43b7edb3125634862d39244d83e3b24b">setKicking</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> num_for_kick);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classCircleGame.html#ae7d1d1a2d931b050130ff469031aac64">determineWinner</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif // CIRCLEGAME_H</span></div>
+<div class="ttc" id="classCircleGame_html_ae7d1d1a2d931b050130ff469031aac64"><div class="ttname"><a href="classCircleGame.html#ae7d1d1a2d931b050130ff469031aac64">CircleGame::determineWinner</a></div><div class="ttdeci">int determineWinner() const </div><div class="ttdoc">Определить победителя </div><div class="ttdef"><b>Definition:</b> circlegame.cpp:15</div></div>
+<div class="ttc" id="classCircleGame_html"><div class="ttname"><a href="classCircleGame.html">CircleGame</a></div><div class="ttdoc">Круговая игра </div><div class="ttdef"><b>Definition:</b> circlegame.h:12</div></div>
+<div class="ttc" id="classCircleGame_html_a2ce615aea3a1beea3fa059e860996e69"><div class="ttname"><a href="classCircleGame.html#a2ce615aea3a1beea3fa059e860996e69">CircleGame::setPlayers</a></div><div class="ttdeci">void setPlayers(const int num_of_players)</div><div class="ttdoc">Установить значение поля players, равное количеству игроков </div><div class="ttdef"><b>Definition:</b> circlegame.cpp:5</div></div>
+<div class="ttc" id="classCircleGame_html_a9d897a36adf928cf37476a49e010e7d2"><div class="ttname"><a href="classCircleGame.html#a9d897a36adf928cf37476a49e010e7d2">CircleGame::CircleGame</a></div><div class="ttdeci">CircleGame(const int num_of_players, const int num_for_kick)</div><div class="ttdoc">Конструктор </div><div class="ttdef"><b>Definition:</b> circlegame.cpp:3</div></div>
+<div class="ttc" id="classCircleGame_html_a43b7edb3125634862d39244d83e3b24b"><div class="ttname"><a href="classCircleGame.html#a43b7edb3125634862d39244d83e3b24b">CircleGame::setKicking</a></div><div class="ttdeci">void setKicking(const int num_for_kick)</div><div class="ttdoc">Установить значение поля kicking, равное номеру человека, которого выводят </div><div class="ttdef"><b>Definition:</b> circlegame.cpp:10</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9.1
+</small></address>
+</body>
+</html>

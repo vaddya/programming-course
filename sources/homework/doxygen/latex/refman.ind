@@ -1,0 +1,99 @@
+\begin{theindex}
+
+  \item {Array}, \hyperpage{5}
+  \item {Array\+App}, \hyperpage{5}
+  \item {Array\+App\+Demo}, \hyperpage{5}
+
+  \indexspace
+
+  \item {Circle\+Game}, \hyperpage{6}
+    \subitem {Circle\+Game}, \hyperpage{6}
+    \subitem {determine\+Winner}, \hyperpage{6}
+    \subitem {set\+Kicking}, \hyperpage{6}
+    \subitem {set\+Players}, \hyperpage{8}
+
+  \indexspace
+
+  \item {determine\+Winner}
+    \subitem {Circle\+Game}, \hyperpage{6}
+  \item {distance}
+    \subitem {Route}, \hyperpage{13}
+
+  \indexspace
+
+  \item {from\+Inches}
+    \subitem {Meter}, \hyperpage{8}
+
+  \indexspace
+
+  \item {get\+Cm}
+    \subitem {Meter}, \hyperpage{9}
+  \item {get\+Inches}
+    \subitem {Meter}, \hyperpage{9}
+  \item {get\+M}
+    \subitem {Meter}, \hyperpage{9}
+  \item {get\+Mm}
+    \subitem {Meter}, \hyperpage{9}
+  \item {get\+Num}
+    \subitem {Number}, \hyperpage{10}
+  \item {get\+Str}
+    \subitem {Phrases}, \hyperpage{12}
+
+  \indexspace
+
+  \item {is\+Palindrome}
+    \subitem {Number}, \hyperpage{10}
+
+  \indexspace
+
+  \item {Meter}, \hyperpage{8}
+    \subitem {from\+Inches}, \hyperpage{8}
+    \subitem {get\+Cm}, \hyperpage{9}
+    \subitem {get\+Inches}, \hyperpage{9}
+    \subitem {get\+M}, \hyperpage{9}
+    \subitem {get\+Mm}, \hyperpage{9}
+  \item {Meters}, \hyperpage{9}
+
+  \indexspace
+
+  \item {Number}, \hyperpage{10}
+    \subitem {get\+Num}, \hyperpage{10}
+    \subitem {is\+Palindrome}, \hyperpage{10}
+    \subitem {Number}, \hyperpage{10}
+
+  \indexspace
+
+  \item {Out\+Of\+Range}, \hyperpage{11}
+
+  \indexspace
+
+  \item {Phrases}, \hyperpage{11}
+    \subitem {get\+Str}, \hyperpage{12}
+    \subitem {Phrases}, \hyperpage{11}
+    \subitem {upper\+\_\+case\+\_\+phrases}, \hyperpage{12}
+
+  \indexspace
+
+  \item {Route}, \hyperpage{12}
+    \subitem {distance}, \hyperpage{13}
+    \subitem {Route}, \hyperpage{12, 13}
+    \subitem {time\+Of\+Half\+Way}, \hyperpage{13}
+
+  \indexspace
+
+  \item {set\+Kicking}
+    \subitem {Circle\+Game}, \hyperpage{6}
+  \item {set\+Players}
+    \subitem {Circle\+Game}, \hyperpage{8}
+
+  \indexspace
+
+  \item {time\+Of\+Half\+Way}
+    \subitem {Route}, \hyperpage{13}
+
+  \indexspace
+
+  \item {upper\+\_\+case\+\_\+phrases}
+    \subitem {Phrases}, \hyperpage{12}
+
+\end{theindex}

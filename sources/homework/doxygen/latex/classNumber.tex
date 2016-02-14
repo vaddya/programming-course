@@ -1,0 +1,99 @@
+\hypertarget{classNumber}{}\section{Класс Number}
+\label{classNumber}\index{Number@{Number}}
+
+
+Число-\/палиндром  
+
+
+
+
+{\ttfamily \#include $<$number.\+h$>$}
+
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNumber_a28d6cb664f9bfcd450dd9323fd074556}{Number} (const int int\+\_\+num)
+\begin{DoxyCompactList}\small\item\em Конструктор, получающий число \end{DoxyCompactList}\item 
+\hyperlink{classNumber_ab216fbf150c9d518cd58bfaede23905c}{Number} (const string str\+\_\+num)
+\begin{DoxyCompactList}\small\item\em Конструктор, получающий строку \end{DoxyCompactList}\item 
+bool \hyperlink{classNumber_a701a60ec8b8d589b26f6c29b3368c2e2}{is\+Palindrome} () const 
+\begin{DoxyCompactList}\small\item\em Метод, определяющий, является ли число палиндромом \end{DoxyCompactList}\item 
+string \hyperlink{classNumber_a02b82dbf5dff1f4042f20a6cc9ea2ec0}{get\+Num} () const 
+\begin{DoxyCompactList}\small\item\em Метод, запрашивающий число в строковом формате \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Число-\/палиндром 
+
+Проверить, является ли заданное число N\+U\+M\+B\+E\+R палиндромом (симметричным, первая цифра равна последней и так далее). 
+
+\subsection{Конструктор(ы)}
+\hypertarget{classNumber_a28d6cb664f9bfcd450dd9323fd074556}{}\index{Number@{Number}!Number@{Number}}
+\index{Number@{Number}!Number@{Number}}
+\subsubsection[{Number}]{\setlength{\rightskip}{0pt plus 5cm}Number\+::\+Number (
+\begin{DoxyParamCaption}
+\item[{const int}]{int\+\_\+num}
+\end{DoxyParamCaption}
+)}\label{classNumber_a28d6cb664f9bfcd450dd9323fd074556}
+
+
+Конструктор, получающий число 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em int\+\_\+num} & число в целом формате, которое нужно проверить на палиндром \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNumber_ab216fbf150c9d518cd58bfaede23905c}{}\index{Number@{Number}!Number@{Number}}
+\index{Number@{Number}!Number@{Number}}
+\subsubsection[{Number}]{\setlength{\rightskip}{0pt plus 5cm}Number\+::\+Number (
+\begin{DoxyParamCaption}
+\item[{const string}]{str\+\_\+num}
+\end{DoxyParamCaption}
+)}\label{classNumber_ab216fbf150c9d518cd58bfaede23905c}
+
+
+Конструктор, получающий строку 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em str\+\_\+num} & число в строковом формате, которое нужно проверить на палиндром \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Методы}
+\hypertarget{classNumber_a02b82dbf5dff1f4042f20a6cc9ea2ec0}{}\index{Number@{Number}!get\+Num@{get\+Num}}
+\index{get\+Num@{get\+Num}!Number@{Number}}
+\subsubsection[{get\+Num}]{\setlength{\rightskip}{0pt plus 5cm}string Number\+::get\+Num (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classNumber_a02b82dbf5dff1f4042f20a6cc9ea2ec0}
+
+
+Метод, запрашивающий число в строковом формате 
+
+\begin{DoxyReturn}{Возвращает}
+число в строковом формате 
+\end{DoxyReturn}
+\hypertarget{classNumber_a701a60ec8b8d589b26f6c29b3368c2e2}{}\index{Number@{Number}!is\+Palindrome@{is\+Palindrome}}
+\index{is\+Palindrome@{is\+Palindrome}!Number@{Number}}
+\subsubsection[{is\+Palindrome}]{\setlength{\rightskip}{0pt plus 5cm}bool Number\+::is\+Palindrome (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classNumber_a701a60ec8b8d589b26f6c29b3368c2e2}
+
+
+Метод, определяющий, является ли число палиндромом 
+
+Ожидается, что число задано \begin{DoxyReturn}{Возвращает}
+true -\/ если число является палиндромом, false -\/ если число таковым не является 
+\end{DoxyReturn}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+cpplib/number.\+h\item 
+cpplib/number.\+cpp\end{DoxyCompactItemize}

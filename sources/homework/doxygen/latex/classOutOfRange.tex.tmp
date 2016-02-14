@@ -1,0 +1,24 @@
+\hypertarget{classOutOfRange}{}\section{Класс Out\+Of\+Range}
+\label{classOutOfRange}\index{Out\+Of\+Range@{Out\+Of\+Range}}
+
+
+Граф наследования\+:Out\+Of\+Range\+:
+% FIG 0
+
+
+Граф связей класса Out\+Of\+Range\+:
+% FIG 1
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classOutOfRange_a88b6ae3b986c33d6246fa6654f2fa7fa}{}{\bfseries Out\+Of\+Range} (int index)\label{classOutOfRange_a88b6ae3b986c33d6246fa6654f2fa7fa}
+
+\item 
+\hypertarget{classOutOfRange_ab4e715dbf8ae28007ecfcb87167baa15}{}int {\bfseries get\+Num} () const \label{classOutOfRange_ab4e715dbf8ae28007ecfcb87167baa15}
+
+\end{DoxyCompactItemize}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+cpplib/array.\+h\end{DoxyCompactItemize}
